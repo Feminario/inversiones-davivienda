@@ -145,7 +145,7 @@ function GrowthBars({byYear, maxVal}) {
   if(!byYear||!byYear.length) return null;
   const show = byYear.filter((_,i)=>(i+1)%5===0||i===byYear.length-1).slice(0,7);
   return (
-    <div style={{display:"flex",alignItems:"flex-end",gap:6,height:120,padding:"0 4px"}}>
+    <div style={{display:"flex",alignItems:"flex-end",gap:6,height:120,padding:"20px 4px 0",overflow:"visible"}}>
       {show.map(d=>{
         const h = Math.round((d.total/maxVal)*100);
         const ch = Math.round((d.contributed/maxVal)*100);
